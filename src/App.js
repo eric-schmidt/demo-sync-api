@@ -5,11 +5,12 @@ import EntryList from './EntryList';
 import './App.css';
 
 // Init environment variables.
-const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
+const { REACT_APP_SPACE_ID, REACT_APP_ENVIRONMENT_ID, REACT_APP_CDA_TOKEN } = process.env;
 
 // Init client.
 const client = createClient({
   space: REACT_APP_SPACE_ID,
+  environment: REACT_APP_ENVIRONMENT_ID,
   accessToken: REACT_APP_CDA_TOKEN,
 });
 
